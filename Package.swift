@@ -3,8 +3,16 @@
 
 import PackageDescription
 
+/// 패키지 환경설정
+/// - Author: 김민규
+/// - Date: 2023/05/22
 let package = Package(
+    /// 패키지 명
     name: "iOS-TripBook-Component-Package",
+    /// 패키지 지원 플랫폼 명세
+    platforms: [
+        .iOS(.v14)
+    ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
