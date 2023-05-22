@@ -11,7 +11,8 @@ let package = Package(
     name: "iOS-TripBook-Component-Package",
     /// 패키지 지원 플랫폼 명세
     platforms: [
-        .iOS(.v14)
+        .iOS(.v14),
+        .macOS(.v11)
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
@@ -30,6 +31,7 @@ let package = Package(
         .target(
             name: "Util",
             resources: [
+                /// Font 리소스 폴더 지정
                 .process("Resource/Font")
             ]
         ),
