@@ -55,7 +55,7 @@ public extension Font {
 struct TBFont_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            VStack(spacing: 20) {
+            VStack(alignment: .leading, spacing: 20) {
                 Text("어제보다 4℃ 높아요 · 주제별 PICK · 최대 60% 캐시백 · QR 결제 · 충전량 35.29kWh")
                     .font(.suit(.thin, size: 20))
                 Text("어제보다 4℃ 높아요 · 주제별 PICK · 최대 60% 캐시백 · QR 결제 · 충전량 35.29kWh")
