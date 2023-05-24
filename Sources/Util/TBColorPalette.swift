@@ -116,6 +116,14 @@ public struct TBColor {
         }
     }
     
+    /// Tripbook Point Colors
+    /// - author: 김민규
+    /// - Date: 2023/05/24
+    struct TBPointColorPalette {
+        var green: [Color]
+        var navy: [Color]
+    }
+    
     /// Tripbook State Colors
     /// - author: 김민규
     /// - Date: 2023/05/24
@@ -135,6 +143,31 @@ public struct TBColor {
         _70: Color(rgb: Color.RGB(red: 199, green: 33, blue: 0)),
         _80: Color(rgb: Color.RGB(red: 173, green: 17, blue: 0)),
         _90: Color(rgb: Color.RGB(red: 143, green: 5, blue: 0))
+    )
+    
+    /// Tripbook Secondary Colors
+    static let secondary: TBColorLevel = .init(
+        _10: Color(rgb: Color.RGB(red: 255, green: 244, blue: 199)),
+        _20: Color(rgb: Color.RGB(red: 255, green: 239, blue: 173)),
+        _30: Color(rgb: Color.RGB(red: 255, green: 233, blue: 143)),
+        _40: Color(rgb: Color.RGB(red: 255, green: 223, blue: 97)),
+        _50: Color(rgb: Color.RGB(red: 255, green: 213, blue: 47)),
+        _60: Color(rgb: Color.RGB(red: 255, green: 205, blue: 5)),
+        _70: Color(rgb: Color.RGB(red: 224, green: 180, blue: 0)),
+        _80: Color(rgb: Color.RGB(red: 189, green: 151, blue: 0)),
+        _90: Color(rgb: Color.RGB(red: 148, green: 118, blue: 0))
+    )
+    
+    /// Tripbook Point Colors
+    static let point: TBPointColorPalette = .init(
+        green: [
+            Color(rgb: Color.RGB(red: 123, green: 243, blue: 151)),
+            Color(rgb: Color.RGB(red: 103, green: 203, blue: 148)),
+            Color(rgb: Color.RGB(red: 0, green: 87, blue: 58))
+        ],
+        navy: [
+            Color(rgb: Color.RGB(red: 9, green: 31, blue: 51))
+        ]
     )
     
     /// Tripbook Grayscale Colors
@@ -186,6 +219,34 @@ struct TBColorPalette_Previews: PreviewProvider {
             }
             .padding()
             .previewDisplayName("Primary")
+            
+            VStack(alignment: .leading, spacing: 0) {
+                ForEach(TBColor.secondary.all(), id: \.self) { level in
+                    level
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 100)
+                }
+            }
+            .padding()
+            .previewDisplayName("Secondary")
+            
+            VStack(alignment: .leading, spacing: 0) {
+                Text("Green").font(.title)
+                ForEach(TBColor.point.green, id: \.self) { level in
+                    level
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 100)
+                }
+                Divider().padding(.vertical)
+                Text("Navy").font(.title)
+                ForEach(TBColor.point.navy, id: \.self) { level in
+                    level
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 100)
+                }
+            }
+            .padding()
+            .previewDisplayName("Point")
             
             VStack(alignment: .leading, spacing: 0) {
                 Text("Warning").font(.title)
