@@ -38,6 +38,19 @@ public struct TBFont {
         case extraBold = "SUIT-ExtraBold"
         case heavy = "SUIT-Heavy"
     }
+    
+    /// TBFont Styles
+    static let heading_1: Font = .suit(.bold, size: 24)
+    static let heading_2: Font = .suit(.bold, size: 20)
+    static let title_1: Font = .suit(.bold, size: 18)
+    static let title_2: Font = .suit(.bold, size: 16)
+    static let title_3: Font = .suit(.bold, size: 14)
+    static let title_4: Font = .suit(.bold, size: 12)
+    static let body_1: Font = .suit(.medium, size: 18)
+    static let body_2: Font = .suit(.medium, size: 16)
+    static let body_3: Font = .suit(.medium, size: 14)
+    static let caption_1: Font = .suit(.medium, size: 12)
+    static let caption_2: Font = .suit(.medium, size: 10)
 }
 
 public extension Font {
@@ -75,6 +88,43 @@ struct TBFont_Previews: PreviewProvider {
                 Text("어제보다 4℃ 높아요 · 주제별 PICK · 최대 60% 캐시백 · QR 결제 · 충전량 35.29kWh")
                     .font(.suit(.heavy, size: 20))
             }.previewDisplayName("SUIT")
+            
+            VStack(alignment: .leading, spacing: 20) {
+                VStack(alignment: .leading) {
+                    Text("Heading").font(.suit(.heavy, size: 20))
+                    Text("어제보다 4℃ 높아요 · 주제별 PICK · 최대 60% 캐시백 · QR 결제 · 충전량 35.29kWh")
+                        .font(TBFont.heading_1)
+                    Text("어제보다 4℃ 높아요 · 주제별 PICK · 최대 60% 캐시백 · QR 결제 · 충전량 35.29kWh")
+                        .font(TBFont.heading_2)
+                }
+                VStack(alignment: .leading) {
+                    Text("Title").font(.suit(.heavy, size: 20))
+                    Text("어제보다 4℃ 높아요 · 주제별 PICK · 최대 60% 캐시백 · QR 결제 · 충전량 35.29kWh")
+                        .font(TBFont.title_1)
+                    Text("어제보다 4℃ 높아요 · 주제별 PICK · 최대 60% 캐시백 · QR 결제 · 충전량 35.29kWh")
+                        .font(TBFont.title_2)
+                    Text("어제보다 4℃ 높아요 · 주제별 PICK · 최대 60% 캐시백 · QR 결제 · 충전량 35.29kWh")
+                        .font(TBFont.title_3)
+                    Text("어제보다 4℃ 높아요 · 주제별 PICK · 최대 60% 캐시백 · QR 결제 · 충전량 35.29kWh")
+                        .font(TBFont.title_4)
+                }
+                VStack(alignment: .leading) {
+                    Text("Body").font(.suit(.heavy, size: 20))
+                    Text("어제보다 4℃ 높아요 · 주제별 PICK · 최대 60% 캐시백 · QR 결제 · 충전량 35.29kWh")
+                        .font(TBFont.body_1)
+                    Text("어제보다 4℃ 높아요 · 주제별 PICK · 최대 60% 캐시백 · QR 결제 · 충전량 35.29kWh")
+                        .font(TBFont.body_2)
+                    Text("어제보다 4℃ 높아요 · 주제별 PICK · 최대 60% 캐시백 · QR 결제 · 충전량 35.29kWh")
+                        .font(TBFont.body_3)
+                }
+                VStack(alignment: .leading) {
+                    Text("Caption").font(.suit(.heavy, size: 20))
+                    Text("어제보다 4℃ 높아요 · 주제별 PICK · 최대 60% 캐시백 · QR 결제 · 충전량 35.29kWh")
+                        .font(TBFont.caption_1)
+                    Text("어제보다 4℃ 높아요 · 주제별 PICK · 최대 60% 캐시백 · QR 결제 · 충전량 35.29kWh")
+                        .font(TBFont.caption_2)
+                }
+            }.previewDisplayName("TBFont Style")
         }
         .previewLayout(.sizeThatFits)
         .padding()
