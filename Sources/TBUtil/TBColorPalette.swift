@@ -53,11 +53,11 @@ public struct TBColor {
     /// Tripbook Color Set
     /// - author: 김민규
     /// - Date: 2023/05/24
-    struct TBColorLevel {
+    public struct TBColorLevel {
         /// Color Level (a.k.a. 명도)
-        private var levels: [Color]
+        public var levels: [Color]
         /// Main Color
-        var main: Color
+        public var main: Color
         
         /// Color Initializer by RGB
         /// - Parameters:
@@ -119,7 +119,7 @@ public struct TBColor {
     /// Tripbook Point Colors
     /// - author: 김민규
     /// - Date: 2023/05/24
-    struct TBPointColorPalette {
+    public struct TBPointColorPalette {
         var green: [Color]
         var navy: [Color]
     }
@@ -127,13 +127,13 @@ public struct TBColor {
     /// Tripbook State Colors
     /// - author: 김민규
     /// - Date: 2023/05/24
-    struct TBColorState {
+    public struct TBColorState {
         /// 경고
         var warning: Color
     }
     
     /// Tripbook Primary Colors
-    static let primary: TBColorLevel = .init(
+    static public let primary: TBColorLevel = .init(
         _10: Color(rgb: Color.RGB(red: 255, green: 214, blue: 173)),
         _20: Color(rgb: Color.RGB(red: 255, green: 194, blue: 148)),
         _30: Color(rgb: Color.RGB(red: 255, green: 167, blue: 112)),
@@ -146,7 +146,7 @@ public struct TBColor {
     )
     
     /// Tripbook Secondary Colors
-    static let secondary: TBColorLevel = .init(
+    static public let secondary: TBColorLevel = .init(
         _10: Color(rgb: Color.RGB(red: 255, green: 244, blue: 199)),
         _20: Color(rgb: Color.RGB(red: 255, green: 239, blue: 173)),
         _30: Color(rgb: Color.RGB(red: 255, green: 233, blue: 143)),
@@ -159,7 +159,7 @@ public struct TBColor {
     )
     
     /// Tripbook Point Colors
-    static let point: TBPointColorPalette = .init(
+    static public let point: TBPointColorPalette = .init(
         green: [
             Color(rgb: Color.RGB(red: 123, green: 243, blue: 151)),
             Color(rgb: Color.RGB(red: 103, green: 203, blue: 148)),
@@ -171,7 +171,7 @@ public struct TBColor {
     )
     
     /// Tripbook Grayscale Colors
-    static let grayscale: TBColorLevel = .init(
+    static public let grayscale: TBColorLevel = .init(
         _0: Color(rgb: Color.RGB(red: 250, green: 249, blue: 249)),
         _10: Color(rgb: Color.RGB(red: 239, green: 236, blue: 236)),
         _20: Color(rgb: Color.RGB(red: 225, green: 220, blue: 219)),
@@ -186,7 +186,7 @@ public struct TBColor {
     )
     
     /// Tripbook State Colors
-    static let state: TBColorState = .init(
+    static public let state: TBColorState = .init(
         warning: Color(rgb: Color.RGB(red: 221, green: 54, blue: 44))
     )
 }
