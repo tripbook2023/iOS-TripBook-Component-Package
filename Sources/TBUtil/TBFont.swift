@@ -40,17 +40,17 @@ public struct TBFont {
     }
     
     /// TBFont Styles
-    static let heading_1: Font = .suit(.bold, size: 24)
-    static let heading_2: Font = .suit(.bold, size: 20)
-    static let title_1: Font = .suit(.bold, size: 18)
-    static let title_2: Font = .suit(.bold, size: 16)
-    static let title_3: Font = .suit(.bold, size: 14)
-    static let title_4: Font = .suit(.bold, size: 12)
-    static let body_1: Font = .suit(.medium, size: 18)
-    static let body_2: Font = .suit(.medium, size: 16)
-    static let body_3: Font = .suit(.medium, size: 14)
-    static let caption_1: Font = .suit(.medium, size: 12)
-    static let caption_2: Font = .suit(.medium, size: 10)
+    static public let heading_1: Font = .suit(.bold, size: 24)
+    static public let heading_2: Font = .suit(.bold, size: 20)
+    static public let title_1: Font = .suit(.bold, size: 18)
+    static public let title_2: Font = .suit(.bold, size: 16)
+    static public let title_3: Font = .suit(.bold, size: 14)
+    static public let title_4: Font = .suit(.bold, size: 12)
+    static public let body_1: Font = .suit(.medium, size: 18)
+    static public let body_2: Font = .suit(.medium, size: 16)
+    static public let body_3: Font = .suit(.medium, size: 14)
+    static public let caption_1: Font = .suit(.medium, size: 12)
+    static public let caption_2: Font = .suit(.medium, size: 10)
 }
 
 public extension Font {

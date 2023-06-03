@@ -123,7 +123,7 @@ struct RootView: View {
     var body: some View {
         VStack {
             TBColor.primary.main
-            TBColor.secondary._10
+            TBColor.secondary.levels[0]
             TBColor.state.warning
         }
     }
