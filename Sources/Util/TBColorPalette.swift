@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-extension Color {
+public extension Color {
     /// RGB
     /// - author: 김민규
     /// - Date: 2023/05/24
