@@ -129,7 +129,7 @@ public struct TBColor {
     /// - Date: 2023/05/24
     public struct TBColorState {
         /// 경고
-        var warning: Color
+        public var warning: Color
     }
     
     /// Tripbook Primary Colors
