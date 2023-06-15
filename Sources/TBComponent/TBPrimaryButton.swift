@@ -19,6 +19,12 @@ public struct TBPrimaryButton: View {
     /// Button OnClicked Event
     var onClickedEvent: () -> Void
     
+    public init(title: String, isEnabled: Binding<Bool>, onClickedEvent: @escaping () -> Void) {
+        self.title = title
+        self._isEnabled = isEnabled
+        self.onClickedEvent = onClickedEvent
+    }
+    
     public var body: some View {
         Button(action: {
             if self.isEnabled {
@@ -44,6 +50,11 @@ public struct TBBorderButton: View {
     var title: String
     /// Button OnClicked Event
     var onClickedEvent: () -> Void
+    
+    public init(title: String, onClickedEvent: @escaping () -> Void) {
+        self.title = title
+        self.onClickedEvent = onClickedEvent
+    }
     
     public var body: some View {
         Button(action: {

@@ -28,6 +28,14 @@ public struct TBTextField: View {
     /// TextField Submit Event
     var onSubmitEvent: () -> Void
     
+    public init(title: String, text: Binding<String>, isValid: Binding<Bool?> = .constant(nil), warningMessage: Binding<String?> = .constant(nil), onSubmitEvent: @escaping () -> Void) {
+        self.title = title
+        self._text = text
+        self._isValid = isValid
+        self._warningMessage = warningMessage
+        self.onSubmitEvent = onSubmitEvent
+    }
+    
     public var body: some View {
         VStack(spacing: 0) {
             HStack {
