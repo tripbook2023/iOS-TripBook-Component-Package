@@ -33,7 +33,7 @@ public struct TBAppBar: View {
                     TBIcon.before.iconSize(size: .medium)
                 }.foregroundColor(TBColor.grayscale.levels[10])
                 Spacer()
-            }.padding(.horizontal, 28.73)
+            }
             
             Text(self.title)
                 .font(TBFont.body_2)
@@ -45,7 +45,7 @@ public struct TBAppBar: View {
 #if DEBUG
 struct TBAppBar_Previews: PreviewProvider {
     static var previews: some View {
-        TBAppBar() {
+        TBAppBar(title: "텍스트") {
             
         }
         .previewDevice("iPhone 14 Pro")
