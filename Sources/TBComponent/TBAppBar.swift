@@ -12,14 +12,23 @@ import TBUtil
 /// - Author: 김민규
 /// - Date: 2023/06/14
 public struct TBAppBar: View {
-    @Environment(\.presentationMode) var presentationMode
     var title: String
+    var onClickedBackButton: () -> Void
+    
+    public init(title: String? = nil, onClickedBackButton: @escaping () -> Void) {
+        if let title {
+            self.title = title
+        } else {
+            self.title = ""
+        }
+        self.onClickedBackButton = onClickedBackButton
+    }
     
     public var body: some View {
         ZStack(alignment: .center) {
             HStack {
                 Button(action: {
-                    self.presentationMode.wrappedValue.dismiss()
+                    self.onClickedBackButton()
                 }) {
                     TBIcon.before.iconSize(size: .medium)
                 }.foregroundColor(TBColor.grayscale.levels[10])
@@ -36,11 +45,13 @@ public struct TBAppBar: View {
 #if DEBUG
 struct TBAppBar_Previews: PreviewProvider {
     static var previews: some View {
-        TBAppBar(title: "텍스트")
-            .previewDevice("iPhone 14 Pro")
-            .previewLayout(.sizeThatFits)
-            .padding()
-            .configureFont()
+        TBAppBar() {
+            
+        }
+        .previewDevice("iPhone 14 Pro")
+        .previewLayout(.sizeThatFits)
+        .padding()
+        .configureFont()
     }
 }
 #endif
