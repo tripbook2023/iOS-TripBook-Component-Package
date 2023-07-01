@@ -33,21 +33,21 @@ public enum TBIconSize: CGFloat {
 /// - Date: 2023/05/25
 public struct TBIcon {
     /// Before Icon
-    static public let before: Image = Image(systemName: "chevron.left")
+    static public let before: Image = Image("Before", bundle: .module)
     /// Next Icon
-    static public let next: Image = Image(systemName: "chevron.right")
+    static public let next: Image = Image("Next", bundle: .module)
     /// Down Icon
-    static public let down: Image = Image(systemName: "arrowtriangle.down.fill")
+    static public let down: Image = Image("Down", bundle: .module)
     /// Check Icon
-    static public let check: Image = Image(systemName: "checkmark")
+    static public let check: Image = Image("Check", bundle: .module)
     /// Cancel Icon
-    static public let cancel: Image = Image(systemName: "xmark")
+    static public let cancel: Image = Image("Cancel", bundle: .module)
     /// Photo Icon
-    static public let picture: Image = Image(systemName: "photo")
+    static public let picture: Image = Image("Picture", bundle: .module)
     /// Camera Icon
-    static public let camera: Image = Image(systemName: "camera")
+    static public let camera: Image = Image("Camera", bundle: .module)
     /// Timer Icon
-    static public let timer: Image = Image(systemName: "clock.fill")
+    static public let timer: Image = Image("Timer", bundle: .module)
 }
 
 #if DEBUG

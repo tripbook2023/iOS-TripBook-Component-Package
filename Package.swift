@@ -1,4 +1,5 @@
 // swift-tools-version: 5.8
+// swift-tools-version: 5.3
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -39,8 +40,7 @@ let package = Package(
         .target(
             name: "TBUtil",
             resources: [
-                /// Font 리소스 폴더 지정
-                .process("Resource/Font")
+                .process("Resource")
             ]
         ),
     ]
