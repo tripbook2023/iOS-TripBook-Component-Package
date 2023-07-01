@@ -27,9 +27,7 @@ public struct TBCheckBox: View {
                 RoundedRectangle(cornerRadius: 4)
                     .foregroundColor(TBColor.primary.main)
                 
-                TBIcon.check
-                    .resizable()
-                    .frame(width: 11, height: 7)
+                TBIcon.check.iconSize(size: .medium)
                     .foregroundColor(TBColor.grayscale.levels[0])
             }.frame(width: 24, height: 24)
         } else {
@@ -37,9 +35,7 @@ public struct TBCheckBox: View {
                 RoundedRectangle(cornerRadius: 4)
                     .foregroundColor(TBColor.grayscale.levels[3])
                 
-                TBIcon.check
-                    .resizable()
-                    .frame(width: 11, height: 7)
+                TBIcon.check.iconSize(size: .medium)
                     .foregroundColor(TBColor.grayscale.levels[2])
             }.frame(width: 24, height: 24)
         }

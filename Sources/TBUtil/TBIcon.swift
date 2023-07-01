@@ -32,214 +32,51 @@ public enum TBIconSize: CGFloat {
 /// - Author: 김민규
 /// - Date: 2023/05/25
 public struct TBIcon {
-    /// Before Icon
-    static public let before: Image = Image("Before", bundle: .module)
-    /// Next Icon
-    static public let next: Image = Image("Next", bundle: .module)
-    /// Down Icon
-    static public let down: Image = Image("Down", bundle: .module)
-    /// Check Icon
-    static public let check: Image = Image("Check", bundle: .module)
-    /// Cancel Icon
-    static public let cancel: Image = Image("Cancel", bundle: .module)
-    /// Photo Icon
-    static public let picture: Image = Image("Picture", bundle: .module)
-    /// Camera Icon
-    static public let camera: Image = Image("Camera", bundle: .module)
-    /// Timer Icon
-    static public let timer: Image = Image("Timer", bundle: .module)
-}
-
-#if DEBUG
-struct TBIcon_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            LazyVGrid(columns: .init(repeating: .init(.flexible()), count: 4)) {
-                VStack(alignment: .leading, spacing: 0) {
-                    Text("Before").font(.title)
-                    LazyVGrid(
-                        columns: [
-                            GridItem(.fixed(70), alignment: .leading),
-                            GridItem(.flexible())
-                        ]
-                    )
-                    {
-                        Text("Tiny:").font(.title2)
-                        TBIcon.before.iconSize(size: .tiny)
-                        
-                        Text("Small:").font(.title2)
-                        TBIcon.before.iconSize(size: .small)
-                        
-                        Text("Medium:").font(.title2)
-                        TBIcon.before.iconSize(size: .medium)
-                        
-                        Text("Big:").font(.title2)
-                        TBIcon.before.iconSize(size: .big)
-                    }
-                }
-                
-                VStack(alignment: .leading, spacing: 0) {
-                    Text("Next").font(.title)
-                    LazyVGrid(
-                        columns: [
-                            GridItem(.fixed(70), alignment: .leading),
-                            GridItem(.flexible())
-                        ]
-                    )
-                    {
-                        Text("Tiny:").font(.title2)
-                        TBIcon.next.iconSize(size: .tiny)
-                    
-                        Text("Small:").font(.title2)
-                        TBIcon.next.iconSize(size: .small)
-                    
-                        Text("Medium:").font(.title2)
-                        TBIcon.next.iconSize(size: .medium)
+    public struct TBIconState {
+        public let normal: Image
+        public let active: Image
         
-                        Text("Big:").font(.title2)
-                        TBIcon.next.iconSize(size: .big)
-                    }
-                }
-                
-                VStack(alignment: .leading, spacing: 0) {
-                    Text("Down").font(.title)
-                    LazyVGrid(
-                        columns: [
-                            GridItem(.fixed(70), alignment: .leading),
-                            GridItem(.flexible())
-                        ]
-                    )
-                    {
-                        Text("Tiny:").font(.title2)
-                        TBIcon.down.iconSize(size: .tiny)
-                    
-                        Text("Small:").font(.title2)
-                        TBIcon.down.iconSize(size: .small)
-                    
-                        Text("Medium:").font(.title2)
-                        TBIcon.down.iconSize(size: .medium)
-        
-                        Text("Big:").font(.title2)
-                        TBIcon.down.iconSize(size: .big)
-                    }
-                }
-                
-                VStack(alignment: .leading, spacing: 0) {
-                    Text("Check").font(.title)
-                    LazyVGrid(
-                        columns: [
-                            GridItem(.fixed(70), alignment: .leading),
-                            GridItem(.flexible())
-                        ]
-                    )
-                    {
-                        Text("Tiny:").font(.title2)
-                        TBIcon.check.iconSize(size: .tiny)
-                    
-                        Text("Small:").font(.title2)
-                        TBIcon.check.iconSize(size: .small)
-                    
-                        Text("Medium:").font(.title2)
-                        TBIcon.check.iconSize(size: .medium)
-        
-                        Text("Big:").font(.title2)
-                        TBIcon.check.iconSize(size: .big)
-                    }
-                }
-                
-                VStack(alignment: .leading, spacing: 0) {
-                    Text("Cancel").font(.title)
-                    LazyVGrid(
-                        columns: [
-                            GridItem(.fixed(70), alignment: .leading),
-                            GridItem(.flexible())
-                        ]
-                    )
-                    {
-                        Text("Tiny:").font(.title2)
-                        TBIcon.cancel.iconSize(size: .tiny)
-                    
-                        Text("Small:").font(.title2)
-                        TBIcon.cancel.iconSize(size: .small)
-                    
-                        Text("Medium:").font(.title2)
-                        TBIcon.cancel.iconSize(size: .medium)
-        
-                        Text("Big:").font(.title2)
-                        TBIcon.cancel.iconSize(size: .big)
-                    }
-                }
-                
-                VStack(alignment: .leading, spacing: 0) {
-                    Text("Picture").font(.title)
-                    LazyVGrid(
-                        columns: [
-                            GridItem(.fixed(70), alignment: .leading),
-                            GridItem(.flexible())
-                        ]
-                    )
-                    {
-                        Text("Tiny:").font(.title2)
-                        TBIcon.picture.iconSize(size: .tiny)
-                    
-                        Text("Small:").font(.title2)
-                        TBIcon.picture.iconSize(size: .small)
-                    
-                        Text("Medium:").font(.title2)
-                        TBIcon.picture.iconSize(size: .medium)
-        
-                        Text("Big:").font(.title2)
-                        TBIcon.picture.iconSize(size: .big)
-                    }
-                }
-                
-                VStack(alignment: .leading, spacing: 0) {
-                    Text("Camera").font(.title)
-                    LazyVGrid(
-                        columns: [
-                            GridItem(.fixed(70), alignment: .leading),
-                            GridItem(.flexible())
-                        ]
-                    )
-                    {
-                        Text("Tiny:").font(.title2)
-                        TBIcon.camera.iconSize(size: .tiny)
-                    
-                        Text("Small:").font(.title2)
-                        TBIcon.camera.iconSize(size: .small)
-                    
-                        Text("Medium:").font(.title2)
-                        TBIcon.camera.iconSize(size: .medium)
-        
-                        Text("Big:").font(.title2)
-                        TBIcon.camera.iconSize(size: .big)
-                    }
-                }
-                
-                VStack(alignment: .leading, spacing: 0) {
-                    Text("Timer").font(.title)
-                    LazyVGrid(
-                        columns: [
-                            GridItem(.fixed(70), alignment: .leading),
-                            GridItem(.flexible())
-                        ]
-                    )
-                    {
-                        Text("Tiny:").font(.title2)
-                        TBIcon.timer.iconSize(size: .tiny)
-                    
-                        Text("Small:").font(.title2)
-                        TBIcon.timer.iconSize(size: .small)
-                    
-                        Text("Medium:").font(.title2)
-                        TBIcon.timer.iconSize(size: .medium)
-        
-                        Text("Big:").font(.title2)
-                        TBIcon.timer.iconSize(size: .big)
-                    }
-                }
-            }.frame(maxWidth: .infinity, maxHeight: .infinity)
-        }.previewLayout(.sizeThatFits)
+        init(_ iconName: String) {
+            self.normal = Image(iconName + "/Default", bundle: .module)
+            self.active = Image(iconName + "/Active", bundle: .module)
+        }
     }
+    
+    public struct TBNavigationIcons {
+        public let home = TBIconState("Navigation/Home")
+        public let mypage = TBIconState("Navigation/Mypage")
+        public let plus = TBIconState("Navigation/Plus")
+        public let tripbook = TBIconState("Navigation/Tripbook")
+    }
+    
+    static public let before = Image("Before", bundle: .module)
+    static public let bell = Image("Bell", bundle: .module)
+    static public let bookmark = Image("Bookmark", bundle: .module)
+    static public let camera = Image("Camera", bundle: .module)
+    static public let cancel = Image("Cancel", bundle: .module)
+    static public let check = Image("Check", bundle: .module)
+    static public let comment = Image("Comment", bundle: .module)
+    static public let delete = Image("Delete", bundle: .module)
+    static public let down: [Image] = [
+        Image("Down/01", bundle: .module),
+        Image("Down/02")
+    ]
+    static public let edit = Image("Edit", bundle: .module)
+    static public let filter = Image("Filter", bundle: .module)
+    static public let keyboard = Image("Keyboard", bundle: .module)
+    static public let like = Image("Like", bundle: .module)
+    static public let location: [Image] = [
+        Image("Location/01", bundle: .module),
+        Image("Location/02", bundle: .module)
+    ]
+    static public let more = TBIconState("More")
+    static public let navigation = TBNavigationIcons()
+    static public let next: Image = Image("Next", bundle: .module)
+    static public let picture: Image = Image("Picture", bundle: .module)
+    static public let search = Image("Search", bundle: .module)
+    static public let share = Image("Share", bundle: .module)
+    static public let timer: Image = Image("Timer", bundle: .module)
+    static public let txt = Image("Txt", bundle: .module)
+    static public let up = Image("Up", bundle: .module)
+    static public let writing = Image("Writing", bundle: .module)
 }
-#endif

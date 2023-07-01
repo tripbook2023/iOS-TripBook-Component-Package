@@ -50,10 +50,7 @@ public struct TBTextField: View {
                     }
                 if !self.text.isEmpty {
                     if self.isValid != nil && self.isValid! {
-                        TBIcon.check
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 18, height: 18)
+                        TBIcon.check.iconSize(size: .small)
                             .foregroundColor(TBColor.primary.main)
                     } else {
                         Button(action: {
