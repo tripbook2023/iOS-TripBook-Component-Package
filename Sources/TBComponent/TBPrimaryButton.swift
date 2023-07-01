@@ -36,7 +36,7 @@ public struct TBPrimaryButton: View {
                 .foregroundColor(self.isEnabled ? TBColor.primary.main : TBColor.grayscale.levels[2])
                 .overlay(
                     Text(self.title)
-                        .font(TBFont.body_2)
+                        .font(TBFont.body_3)
                 )
         }.foregroundColor(self.isEnabled ? TBColor.grayscale.levels[0] : TBColor.grayscale.levels[7])
     }
@@ -65,7 +65,7 @@ public struct TBBorderButton: View {
                 .foregroundColor(.clear)
                 .overlay(
                     Text(self.title)
-                        .font(TBFont.body_2)
+                        .font(TBFont.body_3)
                 )
         }
         .foregroundColor(TBColor.primary.main)

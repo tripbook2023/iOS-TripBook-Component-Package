@@ -36,7 +36,7 @@ public struct TBAppBar: View {
             }
             
             Text(self.title)
-                .font(TBFont.body_2)
+                .font(TBFont.body_3)
                 .foregroundColor(TBColor.grayscale.levels[9])
         }.frame(height: 48)
     }

@@ -40,7 +40,8 @@ let package = Package(
         .target(
             name: "TBUtil",
             resources: [
-                .process("Resource")
+                .process("Resource/Image"),
+                .process("Resource/Font")
             ]
         ),
     ]

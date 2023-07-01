@@ -42,7 +42,7 @@ public struct TBTextField: View {
                 TextField(self.title, text: self.$text)
                     .padding(.vertical, 14)
                     .background(Color.clear)
-                    .font(TBFont.body_3)
+                    .font(TBFont.body_4)
                     .foregroundColor(!self.text.isEmpty || self.isFocused ? TBColor.grayscale.levels[10] : TBColor.grayscale.levels[3])
                     .autocorrectionDisabled(true)
                     .onSubmit {
