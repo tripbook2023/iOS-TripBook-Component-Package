@@ -12,7 +12,7 @@ let package = Package(
     name: "iOS-TripBook-Component-Package",
     /// 패키지 지원 플랫폼 명세
     platforms: [
-        .iOS(.v14),
+        .iOS(.v15),
         .macOS(.v11)
     ],
     products: [
@@ -20,11 +20,7 @@ let package = Package(
         .library(
             name: "TBComponent",
             targets: ["TBComponent"]
-        ),
-        .library(
-            name: "TBUtil",
-            targets: ["TBUtil"]
-        ),
+        )
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
